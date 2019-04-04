@@ -6,14 +6,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <form (ngSubmit)="findProduct()">
-    <ion-label>
-      กรอกข้อมูลที่ต้องการค้นหา
-    </ion-label>
-    <ion-input name="keyword" [(ngModel)]="data.keyword"></ion-input>
-    <button ion-button block type="submit">
-      <ion-icon name='search'></ion-icon> ค้นหา
-    </button>
+<ion-content>
+  <form (ngSubmit)="findbarber()">
+  <ion-label>
+    กรอกข้อมูลที่ต้องการค้นหา
+  </ion-label>
+  <ion-card>
+      <ion-input [(ngModel)]="data.keyword" name="keyword"></ion-input>
+  </ion-card>
+  <button ion-button block type="submit">
+    <ion-icon name="search" ></ion-icon>ค้นหา
+  </button>
   </form>
+
 </ion-content>

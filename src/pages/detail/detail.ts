@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Http } from '@angular/http';
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
-
 
 
 /**
@@ -21,16 +20,12 @@ export class DetailPage {
 
   barbershop:any=0;
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
-    let bid=this.navParams.get('babberID');
+    let bid=this.navParams.get('BabberID');
     let url = "http://localhost:8080/barbershop/" + bid;
-    this.http.get(url)
-      .map(res=>res.json())
-      .subscribe(data => {
-        this.barbershop = data;
-      })
-
+    console.log(url)
+    this.http.get(url).map(res => res.json()).subscribe(data => {this.barbershop = data});
   }
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailPage');
   }

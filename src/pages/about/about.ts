@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ResultPage } from '../result/result';
+import {ResultPage} from '../result/result';
 
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
 })
 export class AboutPage {
-  data={keyword:""};
+data={keyword:""};
   constructor(public navCtrl: NavController) {
 
   }
-  findProduct(){
+  findbarber(){
     console.log(this.data.keyword);
-    this.navCtrl.push(ResultPage, {keyword: this.data.keyword});
-  }
+    this.navCtrl.push(ResultPage, {ketword: this.data.keyword})
+  };
 }
