@@ -1,15 +1,12 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Barber Shop</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
+  <button ion-button small color="danger" (click)="newbarber()">เพิ่มร้านตัดผม</button>
   <ion-list>
-    <ion-item *ngFor="let b of  barbershop">
+    <ion-item *ngFor="let b of barbershop"> 
       <h2>{{b.BabberID}}</h2>
-      <p>{{b.BaberName}}</p>
-      <button ion-button clear item-end (click)="showDetail(b.BabberID)">View</button>
+      <h2>{{b.BaberName}}</h2>
+        <button ion-button clear item-end (click)="showDetail(b.BabberID)">View</button>
+        <button ion-button clear item-end (click)="deleteData(b.BabberID)">Delete</button>
+        <button ion-button clear item-end (click)="editData(b.BabberID)">Edit</button>
     </ion-item>
   </ion-list>
 </ion-content>

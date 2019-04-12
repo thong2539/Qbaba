@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>เพิ่มร้านตัดผมใหม่</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="addbarber()">
+      <ion-item>
+        <ion-label floating >รหัสร้านตัดผม</ion-label>
+        <ion-input type="text" name="BabberID" [(ngModel)]="barbershop.BabberID" ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating >ชื่อร้านตัดผม</ion-label>
+          <ion-input type="text" name="BaberName" [(ngModel)]="barbershop.BaberName" ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating >ชื่อเจ้าของร้าน</ion-label>
+          <ion-input type="text" name="OwnerName" [(ngModel)]="barbershop.OwnerName" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating >เบอร์โทรศัพท์</ion-label>
+            <ion-input type="text" name="TelBarber" [(ngModel)]="barbershop.TelBarber" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating >ที่อยู่ร้าน</ion-label>
+            <ion-input type="text" name="Address" [(ngModel)]="barbershop.Address" ></ion-input>
+        </ion-item>             
+        <button ion-button block>บันทึก</button>
+    </form>
+</ion-content>
