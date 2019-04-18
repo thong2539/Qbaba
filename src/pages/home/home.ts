@@ -4,6 +4,7 @@ import { DetailPage } from '../detail/detail';
 import { NewbarberPage} from '../newbarber/newbarber';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import { EditDataPage } from '../edit-data/edit-data';
 
 @Component({
   selector: 'page-home',
@@ -18,6 +19,10 @@ export class HomePage {
   showDetail(id)
   {
     this.navCtrl.push(DetailPage,{BabberID:id});
+  }
+  editData(id)
+  {
+    this.navCtrl.push(EditDataPage,{BabberID:id});
   }
   newbarber()
   {

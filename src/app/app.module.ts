@@ -16,7 +16,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { DetailPage } from '../pages/detail/detail';
 import { ResultPage} from '../pages/result/result';
 import { NewbarberPage} from '../pages/newbarber/newbarber';
-import {EditDataPage} from '../pages/editdata/editdata';
+import {EditDataPage} from '../pages/edit-data/edit-data';
+
 
 
 
@@ -34,6 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ResultPage,
     NewbarberPage,
     EditDataPage
+    
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ResultPage,
     NewbarberPage,
     EditDataPage
+    
   ],
   providers: [
     StatusBar,

@@ -1,23 +1,28 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import {HttpClient} from '@angular/common/http';
-import {Http} from '@angular/http';
-import 'rxjs/add/operator/map';
+import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
+/**
+ * Generated class for the EditDataPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
 @IonicPage()
 @Component({
-  selector: 'page-edit',
-  templateUrl: 'edit.html',
+  selector: 'page-edit-data',
+  templateUrl: 'edit-data.html',
 })
 export class EditDataPage {
+
   barbershop = {
     BabberID:"",
     BaberName:"",
     OwnerName:"",
     TelBarber:"",
     Address:""
-
   };
   data:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http,private alertCtrl:AlertController, private httpClient: HttpClient) {
@@ -54,12 +59,9 @@ export class EditDataPage {
     }
    
   
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditDataPage');
   }
-
-
-
-    
 
 }
